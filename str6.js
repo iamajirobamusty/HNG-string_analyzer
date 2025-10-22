@@ -21,11 +21,6 @@ app.post('/strings', (req, res) => {
     try {
         const { value } = req.body;
 
-        if (!value) {
-            return res.status(400).json({
-                success: false,
-                message: 'Invalid request body or missing "value" field'
-            });
         }
 
         if (typeof value !== "string") {
