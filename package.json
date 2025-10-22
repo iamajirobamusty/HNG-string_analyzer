@@ -1,9 +1,10 @@
 {
   "name": "test0",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "str6.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node str6.js"
   },
   "keywords": [],
   "author": "",
