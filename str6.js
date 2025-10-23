@@ -21,6 +21,8 @@ app.post('/strings', (req, res) => {
     try {
         const { value } = req.body;
 
+        if (!value
+
         if (!value || typeof value !== 'string') {
             return res.status(422).json({  // 422 for missing/invalid type
                 success: false,
@@ -31,7 +33,7 @@ app.post('/strings', (req, res) => {
         // Check for duplicate
         const exist = saved_strings.some(item => item.value.toLowerCase() === value.toLowerCase());
         if (exist) {
-            return res.status(409).json({  // Correct status for duplicates
+            return res.status(422).json({  // Correct status for duplicates
                 success: false,
                 message: "String already exists in the system"
             });
