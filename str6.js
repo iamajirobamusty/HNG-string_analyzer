@@ -21,8 +21,6 @@ app.post('/strings', (req, res) => {
     try {
         const { value } = req.body;
 
-        if (!value
-
         if (!value || typeof value !== 'string') {
             return res.status(422).json({  // 422 for missing/invalid type
                 success: false,
