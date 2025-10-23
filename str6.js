@@ -142,7 +142,7 @@ app.delete('/strings/:string_value', (req, res) => {
     if (index === -1) return res.status(404).json({ success: false, message: "String does not exist in the system" });
 
     saved_strings.splice(index, 1);
-    return res.status(204).send();
+    return res.status(204);
 });
 
 // Start server
